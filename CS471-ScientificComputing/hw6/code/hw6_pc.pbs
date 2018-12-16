@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#PBS -lnodes=1:ppn=8
+#PBS -l walltime=00:05:00
+#PBS -N hw6_p
+
+module load openmpi-3.1.1-intel-19.0.0-azl5w5o
+module load anaconda
+source activate wheeler_mpi_py2_1
+
+cd $PBS_O_WORKDIR
+
+mpirun -n $PBS_NP python hw6_parallel.py convergence

@@ -1,0 +1,71 @@
+gdb bomb --command=init
+init file just sets all breakpoints and settings for me as it was tedious to write constantly.
+
+
+Phase 1 was similar to the lab exercise. I continued into phase_1 and then supplied a dummy string breaking right before explode_bomb. Then, I just did x/s on $esi which was the location of the string being compared to my string to reveal the plaintext solution of "The moon unit will be divided into two divisions.".
+
+
+In phase 2, first noticed the read_six_numbers call as a function that seems to be taking the possible answer. I tested inputting "0 1 2 3 4 5", and noticed it was being stored in %eax. I next noticed an initial comparison of 0x1 with %rsp, that could possibly mean that the first digit is 1. I used the command 'i r' to view the contents of registers. Using disas to view assembly and ni to step instructions, I noticed a pattern in the numbers, namely, that they were powers of 2.
+
+
+In phase 3, first noticed the call to scanf with a mov of 0x40272e right before. I checked the contents of 0x40272e with x/s to find "%d %c %d", this must be the format of the solution here. I provided an initial guess of '1 a 2' and noticed that the first bomb explode call was passed - lucky guess on the first digit! Next, I looked at the next comparison which occurred before explode bomb:
+cmpl   $0xe9,0x14(%rsp)
+0xe9 = 233 decimal so I tried that for the last number (which appears to be checked next by the jump table). 233 worked as I've progressed past the next explode bomb from the jump table. Now, I'm looking at the comparison which is:
+cmp    0xf(%rsp),%al
+I know this last cmp must be a character so I print with x/c $al to get the character x.
+That worked, the solution is '1 x 233'
+
+
+In phase 4, printing 0x402a39 (the first noticeable address before call to scan) gave "%d %d" this must be the format of the solution. The next compare just makes sure we gave 2 arguments confirming the suspicion. The move 0xe to edx, 0x0 to esi then call func 4 tells us the arguments 0 and 14 are passed to func. I then disas func4 to see what it's doing. It appears to be a recursive function, yikes! 2 shifts occur within this function, one just shifts by 31 to check if positive, the next appears to be shifting the sum of the two arguments right by 1 (which would be equal to 8). When we return from func 4 we check if 
+eax=1 and if not explode so the second argument must be 1. So the solution must be '8 1'.
+
+
+In phase 5:
+call to string_length followed by comparison to 6, jump if equal to 6 to next => input is a length 6 string.
+there appears to be a loop in the middle as we add 1 to rax then cmp then jne to phase_5+31 only escaping when complete into another comparison that compares our (probably modified) string with $0x37=55 decimal. I believe this is a number comparison though so I'll try to find letters that somehow sum to 0x37 by the loop.
+I input "abcdef" and see what is done to the string. 
+There's a lookup table in here. it seems like each character is being anded to only consider it's low 4 bits to index that table. the resulting 6 numbers from the table are then summed and must be equal to 0x37=55
+FROM TABLE:
+0x: 55-f-f-f-f-e-b = 0
+=> get indexes to recieve f+f+f+f+e+b
+idx: 7,7,7,7,5,6
+idx by char&0xf
+ascii o ends in 1111 => f index
+      n ends in 1110 => e index
+      k ends in 1011 => c index
+'oooonk' didnt work maybe 'ggggfc'
+my indexing is off, I found that the current sum is being stored in ecx though. 
+If i b* 0x00000000004011f7 and step through various inputs I can determine which numbers sum to 55 the hard 'brute force' way.
+a = 10
+b = 6
+c = 1
+d = 12
+e = 16
+f = 9
+10 + 10 + 10 + 10 + 6 + 9 = 55
+'aaaabf' THIS SOLVED IT!
+
+
+phase_6 uses the same read_six_numbers function the input must also be 6 numbers here. first cmp between 6 on each number with jbe, makes sure each number is less than or equal to 6. There's definitely some loops in here judging by how stepping is looking. Testing with input '1 2 3 4 5 6', the last check appears to be at <+232> so I'll break there to see if it gains me any insight. The last compare appears to contain a node, is this a linked list? I referred to text to determine how to access linked list node ptrs in gdb and attempted to access the next node (if any) I used x/8x at first to attempt to view all content but it appeared each only contained three terms so x/3x should do.
+x/3x $rbx = node 6
+0x00000352	0x00000006	0x00604340
+x/3x *($rbx+8) = node 5
+0x0000009a	0x00000005	0x00604330
+x/3x *(*($rbx+8)+8) = node4	
+0x0000018b	0x00000004	0x00604320
+x/3x *(*(*($rbx+8)+8)+8) = node3
+0x000000fb	0x00000003	0x00604310
+x/3x *(*(*(*($rbx+8)+8)+8)+8) = node2	
+0x00000368	0x00000002	0x00604300
+x/3x *(*(*(*(*($rbx+8)+8)+8)+8)+8) = node1	
+0x0000034e	0x00000001	0x00000000
+next = null
+what does this tell me? surely it's important. I notice that the last address in each set of values corresponds to the next node (it's the ptr), and the middle value corresponds to my input (I tried some other values and noticed different orderings here which matched my input). The first value in each set is just some arbitrary number but we appear to be checking each value in a node with its next and jumping to explode_bomb if it exceeds the next. maybe I should order my input in such a way that largest is first and smallest is last.
+This is done below
+2: x368 = 872
+6: x352 = 850
+1: x348 = 846
+4: x18b = 395
+3: xfb  = 251
+5: x9a  = 154
+So my input may be '2 6 1 4 3 5', trying this. It worked! phase 6 complete.

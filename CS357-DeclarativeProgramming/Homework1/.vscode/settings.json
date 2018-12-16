@@ -1,0 +1,23 @@
+{
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "workbench.colorTheme": "Pastels_on_Dark",
+
+  // Controls if the editor should automatically close brackets after opening them
+  "editor.autoClosingBrackets": true,
+  // Controls if the editor should automatically adjust the indentation when users type, paste or move lines. Indentation rules of the language must be available.
+  "editor.autoIndent": true,
+  // Controls whether the editor should render the inline color decorators and color picker.
+  "editor.colorDecorators": true,
+  // Controls if the editor should allow to move selections via drag and drop.
+  "editor.dragAndDrop": true,
+  // Insert spaces when pressing Tab. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.insertSpaces": true,
+  // Enables the code action lightbulb
+  "editor.lightbulb.enabled": true,
+  // Highlight matching brackets when one of them is selected.
+  "editor.matchBrackets": true,
+  // The number of spaces a tab is equal to. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+  // Controls if the explorer should allow to move files and folders via drag and drop.
+  "explorer.enableDragAndDrop": true,
+}

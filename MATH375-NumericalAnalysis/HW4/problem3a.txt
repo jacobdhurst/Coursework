@@ -1,0 +1,14 @@
+eiffel1.mat
+Max displacement at node: 521
+CPU time: 7.109375
+
+eiffel2.mat
+Max displacement at node: 797
+CPU time: 39.312500
+
+eiffel3.mat
+Max displacement at node: 1121
+CPU time: 123.937500
+
+eiffel4.mat
+Personal computer reached it's limit here.

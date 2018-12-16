@@ -1,0 +1,6 @@
+From 3 to 6 threads we observe a nearly level time of ~7.5. From 6 to 8 threads we observe a slight increase to a time of ~8. 
+
+Similarly, we observe the efficiency by threads and can notice the curve begins to level out towards the halfway mark (4 threads).
+
+It appears the available work to parallelize for option 1 gets swamped by machine limitations in this range, particularly, at 4 threads. 
+
