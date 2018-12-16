@@ -1,0 +1,3 @@
+Albuquerque:TLT:Rio Rancho
+Santa Fe:TLLLLT:Farmington
+Belen:TLLLLLLLT:Las Cruces

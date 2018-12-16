@@ -1,0 +1,6 @@
+California:TLSLT:Washington
+Nevada:TLSLL:
+Colorado:TTTTLSLTTT:New Mexico
+:TLSLLSLTTT:Illinois
+Tennessee:TLSLTTTTTTTTLSLT:Florida
+:TTTTTTTTTTTTLSLT:Maine

@@ -1,0 +1,4 @@
+Albuquerque:TLSLT:Belen
+Carlsbad:TLSLT:Farmington
+Las Cruces:TLSLT:Los Lunas
+Santa Fe:TLSLT:Taos

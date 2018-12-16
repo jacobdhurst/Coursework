@@ -1,0 +1,3 @@
+Albuquerque:TTSLTTSLTT:Rio Rancho
+Boston:TLSTTLSST:Brooklyn
+Compton:TTTTTTLSLT:Calabasas

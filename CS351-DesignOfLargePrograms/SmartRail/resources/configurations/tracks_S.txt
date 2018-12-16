@@ -1,0 +1,4 @@
+Albuquerque:TT:Belen
+Carlsbad:TTTT:
+Las Cruces:TTTTTT:Los Lunas
+Santa Fe:TTTTTTTT:Taos

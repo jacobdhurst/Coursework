@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane prefWidth="950.0" prefHeight="600.0" xmlns="http://javafx.com/javafx/8.0.111"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Agent.AgentGUIController">
+    <children>
+        <HBox fx:id="hBox1" alignment="CENTER" prefWidth="950" prefHeight="50">
+            <TextField fx:id="bankIP" layoutY="25.0" prefWidth="200.0" prefHeight="30.0"
+                       promptText="Bank IP address" text="Bank IP address"/>
+            <Button fx:id="connect" mnemonicParsing="false" onAction="#secureConnection"
+                    prefWidth="200.0" prefHeight="30.0" text="Connect"/>
+            <TextField fx:id="auctionIP" prefWidth="200.0" prefHeight="30.0"
+                       promptText="Auction Central IP address" text="Auction Central IP address"/>
+        </HBox>
+
+        <Text fx:id="txtTotalBidPlaced" fill="#0ba3e5" strokeType="OUTSIDE"
+              strokeWidth="0.0" text="Bid:" wrappingWidth="100" layoutX="30.0" layoutY="100.0">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Text>
+
+        <TextArea fx:id="textArea" layoutX="175.0" prefWidth="600.0" prefHeight="400.0" translateY="30.0"/>
+
+        <Text fx:id="txtBankBalance" fill="#0eeb1d" strokeType="OUTSIDE"
+              strokeWidth="0.0" text="Balance: $0.00" wrappingWidth="100" layoutX="800.0" layoutY="100.0">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Text>
+
+        <VBox alignment="CENTER" prefWidth="950" maxHeight="100" layoutY="450.0">
+            <ComboBox fx:id="itemsComboBox" prefHeight="25.0" prefWidth="600.0" translateY="10.0"
+                      promptText="Select Items to Bid on"/>
+            <TextField fx:id="input" maxWidth="600" prefWidth="600.0" prefHeight="30.0" translateY="15.0"
+                       promptText="Enter 'bid' and amount of money (e.g. bid 100)"/>
+            <Button fx:id="btnBid" defaultButton="true" mnemonicParsing="false"
+                    onAction="#placeBid" prefHeight="30.0" prefWidth="600.0" translateY="20.0" text="Bid"/>
+        </VBox>
+    </children>
+</AnchorPane>

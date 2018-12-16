@@ -1,0 +1,7 @@
+Minimum time on 1 thread: 0.659749078751 (option 2 with 10 timing samples).
+
+Minimum time on 2 threads: 0.3865599823s (option 2 with 10 timing samples).
+
+Minimum time on 3 threads: 0.331065883636s (option 2 with 10 timing samples).
+
+We observe via the preliminary timings that increasing our threads from 1 to 2 decreases our time by ~41.4% and increasing our threads from 1 to 3 decreases our time by ~49.8%.
