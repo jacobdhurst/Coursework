@@ -1,3 +1,0 @@
-Hello, World!
-I am Jacob Hurst.
-I am learning version control.
