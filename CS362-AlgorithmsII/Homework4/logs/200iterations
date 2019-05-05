@@ -1,0 +1,64 @@
+Training loaded.
+Would you like to train (T) or play (P)? P
+Input 3 pile dimensions: 4,4,5
+Pile dimensions: 4, 4, 5.
+***************************
+Evaluation: 
+[[0.1313999 ]
+ [0.11879028]
+ [0.46621039]
+ [0.00641483]
+ [0.15244294]
+ [0.44602388]
+ [0.36024962]
+ [0.23077832]
+ [0.77016804]]
+Selection:2
+Remaining:0
+Strategy: (take, from) (5, 2)
+***************************
+Computer took 5 from pile 2!
+Pile dimensions: 4, 4, 0.
+Human turn | provide your move 'amount,index': 2,1
+Human took 2 from pile 1!
+Pile dimensions: 4, 2, 0.
+***************************
+Evaluation: 
+[[0.59264177]
+ [0.00496252]
+ [0.30531252]
+ [0.00571492]
+ [0.33302314]
+ [0.29483899]
+ [0.77254033]
+ [0.49103716]
+ [0.54907728]]
+Selection:0
+Remaining:0
+Strategy: (take, from) (2, 0)
+***************************
+Computer took 4 from pile 0!
+Pile dimensions: 0, 2, 0.
+Human turn | provide your move 'amount,index': 1,1
+Human took 1 from pile 1!
+Pile dimensions: 0, 1, 0.
+***************************
+Evaluation: 
+[[0.02163057]
+ [0.00773961]
+ [0.16547834]
+ [0.02896879]
+ [0.09549115]
+ [0.14350999]
+ [0.3393904 ]
+ [0.38193455]
+ [0.8847075 ]]
+Selection:2
+Remaining:0
+Strategy: (take, from) (1, 1)
+***************************
+Computer took 0 from pile 2!
+Pile dimensions: 0, 1, 0.
+Human turn | provide your move 'amount,index': 1,1
+Human took 1 from pile 1!
+Human won!

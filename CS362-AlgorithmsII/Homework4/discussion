@@ -1,0 +1,10 @@
+The model for input and outputs I selected for my neural network matches that of my initial network, 18 inputs representing 3, 6 bit, pile sizes in binary and 9 outputs, 3 denoting the selected pile and 6 denoting the remaining pile size in binary.
+The labeled training data was generated all at once at the start of the program by generating the set of pile configurations then evaluating each and storing the evaluation (see strategy and xor_solver functions).
+I first trained the network on a smaller training set (max pile size of 8) and then ramped my way up to piles of size 64. The training of the network on the 64^3 training data was a little slow so I opted to focus on training the network with a max pile size of 32.
+The current version for this submission reflects that decision. I also added functionalities to my network to enable autosaving and autoloading training progress using cPickle.
+
+In developing the network, I experimented a lot with various batch sizes and learning rates. I found that smaller batches of my training data and a learning rate close to 0.01 resulted in a faster convergence of error to ~0.25.
+After some time, most of the training variants I had completed appeared to converge to this error of 0.25. Further training from this point appeared to offer insignificant improvements or worse, would result in an increase in error - possibly from overfitting.
+
+When playing against the trained neural network, optimal opening moves are chosen relatively consistently. I noticed the network consistently balances piles - reflecting optimal strategy - but then may struggle slightly to carry on from there.
+The network takes wins relatively consistently when it is presented with opportunities.

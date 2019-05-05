@@ -1,0 +1,78 @@
+RUN 1
+>> python3 nim_network.py 8 15 5
+
+Pile sizes: 8, 15, 5.
+Computer took 2 from pile 1!
+Pile sizes: 8, 13, 5.
+Human turn | provide your move 'amount,index': 8,0
+Human took 8 from pile 0!
+Pile sizes: 0, 13, 5.
+Computer took 8 from pile 1!
+Pile sizes: 0, 5, 5.
+Human turn | provide your move 'amount,index': 2,1
+Human took 2 from pile 1!
+Pile sizes: 0, 3, 5.
+Computer took 2 from pile 2!
+Pile sizes: 0, 3, 3.
+Human turn | provide your move 'amount,index': 1,2
+Human took 1 from pile 2!
+Pile sizes: 0, 3, 2.
+Computer took 1 from pile 1!
+Pile sizes: 0, 2, 2.
+Human turn | provide your move 'amount,index': 1,1
+Human took 1 from pile 1!
+Pile sizes: 0, 1, 2.
+Computer took 1 from pile 2!
+Pile sizes: 0, 1, 1.
+Human turn | provide your move 'amount,index': 1,1
+Human took 1 from pile 1!
+Pile sizes: 0, 0, 1.
+Computer took 1 from pile 2!
+Computer won!
+
+RUN 2
+>> python3 nim_network.py 10 10 10
+
+Pile sizes: 10, 10, 10.
+Computer has 3 available moves.
+Computer took 10 from pile 0!
+Pile sizes: 0, 10, 10.
+Human turn | provide your move 'amount,index': 10,2
+Human took 10 from pile 2!
+Pile sizes: 0, 10, 0.
+Computer took 10 from pile 1!
+Computer won!
+
+RUN 3
+>> python3 nim_network.py 63 63 63
+
+Pile sizes: 63, 63, 63.
+Computer has 3 available moves.
+Computer took 63 from pile 0!
+Pile sizes: 0, 63, 63.
+Human turn | provide your move 'amount,index': 32,2
+Human took 32 from pile 2!
+Pile sizes: 0, 63, 31.
+Computer took 32 from pile 1!
+Pile sizes: 0, 31, 31.
+Human turn | provide your move 'amount,index': 1,1
+Human took 1 from pile 1!
+Pile sizes: 0, 30, 31.
+Computer took 1 from pile 2!
+Pile sizes: 0, 30, 30.
+Human turn | provide your move 'amount,index': 16,2
+Human took 16 from pile 2!
+Pile sizes: 0, 30, 14.
+Computer took 16 from pile 1!
+Pile sizes: 0, 14, 14.
+Human turn | provide your move 'amount,index': 4,1
+Human took 4 from pile 1!
+Pile sizes: 0, 10, 14.
+Computer took 4 from pile 2!
+Pile sizes: 0, 10, 10.
+Human turn | provide your move 'amount,index': 10,2
+Human took 10 from pile 2!
+Pile sizes: 0, 10, 0.
+Computer took 10 from pile 1!
+Computer won!
+

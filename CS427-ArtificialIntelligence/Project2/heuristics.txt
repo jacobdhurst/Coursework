@@ -1,0 +1,14 @@
+Black White Tile Problem:
+The heuristic used involves counting the number of white tiles to the right of a black or empty tile.
+This is accomplished by looking at whats in the first 3 tile spaces. If the first space is not white,
+then we know there must be atleast 3 white tiles to the right from here so we add 3 to H. If the second space
+is not white, then we know there must be atleast 2 white tiles to the right from here so we add 2 to H. If
+the third space is not white, then we know there must be atleast 1 white tile to the right from here so we
+add 1 to H. This heuristic is admissible as it evaluates to 0 at the goal state and never overestimates
+the remaining moves to be made.
+
+Vampire Werewolf Problem:
+The heuristic used involves counting the number of werewolves and vampires to the east of the rio grande
+after the move has been made (and dividing by the boat capacity, 2). This heuristic is admissible as 
+it is 0 when at the goal state (everyone on the west side), and it never overestimates the distance to
+the goal as it only counts the final east value for each given step (which should always be decreasing).

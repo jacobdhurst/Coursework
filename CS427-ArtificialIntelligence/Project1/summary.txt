@@ -1,0 +1,11 @@
+In developing our chatbot, Richard and I first started by creating greeting, farewell, and fallback intents.
+Once we had the basic intents set up and working, we completed the Small Talk tool to help the bot converse more smoothly.
+From here we began defining the bulk of our entities, we utilized entities for object recognition, synonyms, grouping, and to guide our intents.
+We used our defined entities to guide us in creating our initial knowledge base (topic-wise) and continually added any pertinent or interesting information to the knowledge base as it came to us. 
+We used our entities and the system entities to get and store the users name, and create contextual conversations (ex: conversing about favorite drinks, etc.).
+Most of the context matching is stored for 10 turns in the conversation, name is stored for 1000 turns.
+Once we learned how to match entities inside intents we created a set of intents that used entities to make conversations feel less hard-coded.
+Once we learned how to use fulfillment, we began writing code within the inline editor provided. The first features added through fulfillment involved basic math
+but as the project progressed we used fulfillment to add stochasticity (via random selection of responses), the ability to obtain age given a user birthdate, general conversation improvements, city/state recognition, etc..
+ 
+The intents, entities, knowledge-base, and webhooks were all continuously tested and improved upon throughout this process.

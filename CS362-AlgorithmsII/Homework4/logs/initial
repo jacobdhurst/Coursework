@@ -1,0 +1,44 @@
+Failed to load training data, training required.
+Would you like to train (T) or play (P)? P
+Input 3 pile dimensions: 10,10,8
+Pile dimensions: 10, 10, 8.
+***************************
+Evaluation: 
+[[0.35011272]
+ [0.03995227]
+ [0.01582506]
+ [0.88048464]
+ [0.99477275]
+ [0.23836284]
+ [0.99850778]
+ [0.87128872]
+ [0.08512701]]
+Selection:0
+Remaining:0
+Strategy: (take, from) (8, 2)
+***************************
+Computer took 10 from pile 0!
+Pile dimensions: 0, 10, 8.
+Human turn | provide your move 'amount,index': 2,1
+Human took 2 from pile 1!
+Pile dimensions: 0, 8, 8.
+***************************
+Evaluation: 
+[[0.19366941]
+ [0.4239017 ]
+ [0.0365796 ]
+ [0.93653692]
+ [0.99973169]
+ [0.51918565]
+ [0.99879618]
+ [0.20681038]
+ [0.3377104 ]]
+Selection:1
+Remaining:0
+Strategy: (take, from) (-1, -1)
+***************************
+Computer took 8 from pile 1!
+Pile dimensions: 0, 0, 8.
+Human turn | provide your move 'amount,index': 8,2
+Human took 8 from pile 2!
+Human won!

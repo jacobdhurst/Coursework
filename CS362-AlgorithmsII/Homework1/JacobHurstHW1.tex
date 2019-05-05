@@ -1,0 +1,33 @@
+\documentclass[12pt]{article}
+\usepackage{listings} % for code 
+\usepackage{lmodern}  % for bold teletype font
+\usepackage{amsmath}  % for \hookrightarrow
+\usepackage{xcolor}   % for \textcolor
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  frame=shadowbox,
+  escapechar=`,
+  linewidth=16cm,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\title{\textbf{CS362, Homework 1: Nim}}
+\author{Jacob Hurst}
+\date{\today}
+\begin{document}
+
+\maketitle
+
+\section{Source Code}
+\lstinputlisting[]{Nim.py}
+
+\section{README.md}
+\lstinputlisting{README.md}
+
+\section{Sample IO Transcripts}
+\lstinputlisting{sampleIO.txt}
+
+\end{document}

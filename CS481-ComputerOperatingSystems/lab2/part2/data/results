@@ -1,0 +1,180 @@
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5737348 kB				      |	MemFree:         5757804 kB
+PageTables:        40728 kB				      |	PageTables:        39812 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5757804 kB				      |	MemFree:         2929316 kB
+PageTables:        39812 kB				      |	PageTables:        51252 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5748424 kB				      |	MemFree:         5759684 kB
+PageTables:        39732 kB				      |	PageTables:        39816 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5759684 kB				      |	MemFree:         2706676 kB
+PageTables:        39816 kB				      |	PageTables:        53312 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5523384 kB				      |	MemFree:         5549912 kB
+PageTables:        42076 kB				      |	PageTables:        41932 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5549912 kB				      |	MemFree:         2712840 kB
+PageTables:        41932 kB				      |	PageTables:        53448 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5531072 kB				      |	MemFree:         5542192 kB
+PageTables:        41852 kB				      |	PageTables:        41964 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5542192 kB				      |	MemFree:         2712536 kB
+PageTables:        41964 kB				      |	PageTables:        53484 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5531404 kB				      |	MemFree:         5541176 kB
+PageTables:        41848 kB				      |	PageTables:        41928 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5541176 kB				      |	MemFree:         2710128 kB
+PageTables:        41928 kB				      |	PageTables:        53368 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5528636 kB				      |	MemFree:         5539656 kB
+PageTables:        41844 kB				      |	PageTables:        41932 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5539656 kB				      |	MemFree:         2709368 kB
+PageTables:        41932 kB				      |	PageTables:        53420 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5528092 kB				      |	MemFree:         5539340 kB
+PageTables:        41844 kB				      |	PageTables:        41932 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5539340 kB				      |	MemFree:         2709504 kB
+PageTables:        41932 kB				      |	PageTables:        53404 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5527412 kB				      |	MemFree:         5538896 kB
+PageTables:        41848 kB				      |	PageTables:        41988 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5538896 kB				      |	MemFree:         2703116 kB
+PageTables:        41988 kB				      |	PageTables:        53404 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5521368 kB				      |	MemFree:         5532832 kB
+PageTables:        41840 kB				      |	PageTables:        41984 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5532832 kB				      |	MemFree:         2703052 kB
+PageTables:        41984 kB				      |	PageTables:        53440 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5521068 kB				      |	MemFree:         5532900 kB
+PageTables:        41856 kB				      |	PageTables:        42012 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5532900 kB				      |	MemFree:         2702832 kB
+PageTables:        42012 kB				      |	PageTables:        53364 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520908 kB				      |	MemFree:         5532352 kB
+PageTables:        41876 kB				      |	PageTables:        41988 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5532352 kB				      |	MemFree:         2702164 kB
+PageTables:        41988 kB				      |	PageTables:        53368 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520572 kB				      |	MemFree:         5504816 kB
+PageTables:        41848 kB				      |	PageTables:        42200 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5504816 kB				      |	MemFree:         2702260 kB
+PageTables:        42200 kB				      |	PageTables:        53364 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520140 kB				      |	MemFree:         5531532 kB
+PageTables:        41916 kB				      |	PageTables:        41932 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531532 kB				      |	MemFree:         2702036 kB
+PageTables:        41932 kB				      |	PageTables:        53428 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520824 kB				      |	MemFree:         5531816 kB
+PageTables:        41852 kB				      |	PageTables:        41976 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531816 kB				      |	MemFree:         2702420 kB
+PageTables:        41976 kB				      |	PageTables:        53360 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520520 kB				      |	MemFree:         5531404 kB
+PageTables:        41836 kB				      |	PageTables:        42028 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531404 kB				      |	MemFree:         2702448 kB
+PageTables:        42028 kB				      |	PageTables:        53360 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520548 kB				      |	MemFree:         5531544 kB
+PageTables:        41840 kB				      |	PageTables:        41920 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531544 kB				      |	MemFree:         2702012 kB
+PageTables:        41920 kB				      |	PageTables:        53360 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520264 kB				      |	MemFree:         5532104 kB
+PageTables:        41840 kB				      |	PageTables:        41952 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5532104 kB				      |	MemFree:         2702384 kB
+PageTables:        41952 kB				      |	PageTables:        53360 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520176 kB				      |	MemFree:         5531888 kB
+PageTables:        41840 kB				      |	PageTables:        41988 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531888 kB				      |	MemFree:         2702400 kB
+PageTables:        41988 kB				      |	PageTables:        53360 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520624 kB				      |	MemFree:         5532036 kB
+PageTables:        41840 kB				      |	PageTables:        41920 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5532036 kB				      |	MemFree:         2702480 kB
+PageTables:        41920 kB				      |	PageTables:        53360 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5519736 kB				      |	MemFree:         5531632 kB
+PageTables:        41840 kB				      |	PageTables:        41920 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531632 kB				      |	MemFree:         2702260 kB
+PageTables:        41920 kB				      |	PageTables:        53360 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520320 kB				      |	MemFree:         5531768 kB
+PageTables:        41840 kB				      |	PageTables:        41996 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531768 kB				      |	MemFree:         2702172 kB
+PageTables:        41996 kB				      |	PageTables:        53356 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5519648 kB				      |	MemFree:         5531364 kB
+PageTables:        41836 kB				      |	PageTables:        42048 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531364 kB				      |	MemFree:         2700972 kB
+PageTables:        42048 kB				      |	PageTables:        53316 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5519892 kB				      |	MemFree:         5531744 kB
+PageTables:        41836 kB				      |	PageTables:        41968 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531744 kB				      |	MemFree:         2701092 kB
+PageTables:        41968 kB				      |	PageTables:        53352 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5520152 kB				      |	MemFree:         5531732 kB
+PageTables:        41832 kB				      |	PageTables:        41912 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531732 kB				      |	MemFree:         2701752 kB
+PageTables:        41912 kB				      |	PageTables:        53352 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5519640 kB				      |	MemFree:         5531508 kB
+PageTables:        41832 kB				      |	PageTables:        41916 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5531508 kB				      |	MemFree:         2701420 kB
+PageTables:        41916 kB				      |	PageTables:        53356 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5519536 kB				      |	MemFree:         5530720 kB
+PageTables:        41848 kB				      |	PageTables:        41924 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5530720 kB				      |	MemFree:         2701628 kB
+PageTables:        41924 kB				      |	PageTables:        53352 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5519328 kB				      |	MemFree:         5530964 kB
+PageTables:        41884 kB				      |	PageTables:        41976 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5530964 kB				      |	MemFree:         2705436 kB
+PageTables:        41976 kB				      |	PageTables:        53352 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5523388 kB				      |	MemFree:         5534520 kB
+PageTables:        41832 kB				      |	PageTables:        41924 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5534520 kB				      |	MemFree:         2705508 kB
+PageTables:        41924 kB				      |	PageTables:        53428 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5523768 kB				      |	MemFree:         5535256 kB
+PageTables:        41832 kB				      |	PageTables:        41912 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5535256 kB				      |	MemFree:         2705396 kB
+PageTables:        41912 kB				      |	PageTables:        53384 kB
+MemFree & PageTables before malloc versus after malloc.
+MemFree:         5523812 kB				      |	MemFree:         5534756 kB
+PageTables:        41832 kB				      |	PageTables:        41912 kB
+MemFree & PageTables after malloc versus after access.
+MemFree:         5534756 kB				      |	MemFree:         2705144 kB
+PageTables:        41912 kB				      |	PageTables:        53408 kB

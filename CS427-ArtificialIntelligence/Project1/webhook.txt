@@ -1,0 +1,196 @@
+// See https://github.com/dialogflow/dialogflow-fulfillment-nodejs
+// for Dialogflow fulfillment library docs, samples, and to report issues
+'use strict';
+ 
+const functions = require('firebase-functions');
+const {WebhookClient} = require('dialogflow-fulfillment');
+const {Card, Suggestion} = require('dialogflow-fulfillment');
+ 
+process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
+ 
+exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
+  const agent = new WebhookClient({ request, response });
+  console.log('Dialogflow Request headers: ' + JSON.stringify(request.headers));
+  console.log('Dialogflow Request body: ' + JSON.stringify(request.body));
+ 
+  function welcome(agent) {
+    agent.add(`Welcome to my agent!`);
+  }
+ 
+  function fallback(agent) {
+    agent.add(`I didn't understand`);
+    agent.add(`I'm sorry, can you try again?`);
+}
+
+// Uncomment and edit to make your own intent handler
+// uncomment `intentMap.set('your intent name here', yourFunctionHandler);`
+// below to get this function to be run when a Dialogflow intent is matched
+function addition(agent) {
+  const n1 = parseInt(agent.parameters['number1']);
+  const n2 = parseInt(agent.parameters['number2']);
+  if(isNaN(n1) || isNaN(n2)) agent.add('I ain\'t too sure of that, slim');
+  else agent.add('I reckon the sum of ' + n1 + ' and ' + n2 + ' would be ' + (n1+n2));
+}
+  
+function subtraction(agent) {
+  const n1 = parseInt(agent.parameters['number1']);
+  const n2 = parseInt(agent.parameters['number2']);
+  if(isNaN(n1) || isNaN(n2)) agent.add('I ain\'t too sure of that, slim');
+  else agent.add('I reckon the difference of ' + n1 + ' and ' + n2 + ' would be ' + (n1-n2));
+}
+
+function animals(agent) {
+  const animal = agent.parameters['Animal'];
+  var response = "I like " + animal + "s";
+  if(animal == "horse") response = "I have a horse";
+  else if(animal == "chicken") response = "I used to have some chickens on my ranch";
+  else if(animal == "elk") response = "I haven't encountered elk out here";
+  else if(animal == "moose") response = "I haven't encountered moose out here";
+  else if(animal == "bear") response = "I fought a bear once";
+  else if(animal == "deer") response = "I've hunted deer before";
+  else if(animal == "dog") response = "I used to have a dog back when I owned a ranch";
+  else if(animal == "cattle") response = "I used to have cattle on my old ranch";
+  else if(animal == "snake") response = "You gotta be careful around snakes";
+  else if(animal == "bison") response = "Those are some big animals";
+  else if(animal == "squirrel") response = "Saw a squirrel earlier today";
+  else if(animal == "rabbit") response = "Saw a rabbit earlier today";
+  agent.add( response );
+}
+  
+function kindsofanimals(agent) {
+  var possibleResponse = [
+  	'I had chickens, pigs, and cattle.',
+  	'I had chickens and pigs.',
+  	'I had horses and cattle.'
+  ];
+  
+  var pick = Math.floor( Math.random() * possibleResponse.length );
+  var response = possibleResponse[pick];
+  agent.add( response );
+}
+
+function earliestmemory(agent) {
+  var possibleResponse = [
+  	'I ain\'t too sure of that.',
+  	'I reckon it\'d be a blue sky.',
+  ];
+  
+  var pick = Math.floor( Math.random() * possibleResponse.length );
+  var response = possibleResponse[pick];
+  agent.add( response );
+}
+  
+function favoritefood(agent) {
+  var possibleResponse = [
+  	'My goto is steak and potatoes, had that today.',
+  	'I eat plenty of beans and rice',
+  	'Eggs and toast.'
+  ];
+  
+  var pick = Math.floor( Math.random() * possibleResponse.length );
+  var response = possibleResponse[pick];
+  agent.add( response );
+}
+  
+function favoritedrink(agent) {
+  var possibleResponse = [
+  	'I could use some whiskey right about now. What do you drink, partner?',
+  	'Coffee or Tea, depends on the day. How about you, kid?',
+    'Nothing beats an ice cold beer, slim.',
+  ];
+  
+  var pick = Math.floor( Math.random() * possibleResponse.length );
+  var response = possibleResponse[pick];
+  agent.add( response );
+}
+  
+function favoritehorse(agent) {
+  var possibleResponse = [
+  	'Best horse I had was a thoroughbread a couple years back',
+  	'I\'ve always wanted an arabian horse',
+  	'Probably my current horse, it\'s breed is american paint'
+  ];
+  
+  var pick = Math.floor( Math.random() * possibleResponse.length );
+  var response = possibleResponse[pick];
+  agent.add( response );
+}
+  
+function datecheck(agent) {
+  const date = parseInt(agent.parameters['date'].substring(0, 4));
+  var age = 2018 - date;
+  var response = "So you're " + age + " years old, then?";
+  if(age > 100) response = "You ain't being honest, slim. Most folk don't live to be " + age + " years old.";
+  else if(age < 0) response = "You ain't being honest, slim. Age can't be less than 0";
+  else if(age > 40) response = age + " years, you're pretty old then."
+  else if(age < 20) response = age + " years, you're a youngin'."
+  agent.add( response );
+}
+  
+function agecheck(agent) {
+  const age = parseInt(agent.parameters['age']); 
+  var response = "So you're" + age + " years old, then?";
+  if(age >= 100) response = "You ain't being honest, slim. Most folk don't live to be " + age + " years old.";
+  else if(age <= 0) response = "You ain't being honest, slim. Age can't be less than 0";
+  else if(age >= 40) response = age + " years, you're pretty old then."
+  else if(age <= 20) response = age + " years, you're a youngin'."
+  agent.add( response );
+}
+  
+function locationcheck(agent) {
+  var wwstates = ["Kansas", "Arizona", "Wyoming", "Nevada", "Oregon", "Texas", "New Mexico", "South Dakota", "North Dakota",
+                 "Colorado"];
+  var wwcities = ["Denver", "Bandera", "Dallas", "San Antonio", "Houston", "Albuquerque", "Santa Fe", "El Paso", "Durango", 
+                  "Deadwood", "Tombstone", "Dodge City"];
+  const city = agent.parameters['geo-city'];
+  const state = agent.parameters['geo-state'];
+  var response = "I don't reckon I recognize that area, city-slicker.";
+  if(wwstates.includes(state) || wwcities.includes(city)) response = city + ", " + state + ", I reckon that's a region of the wild west.";
+  agent.add( response );
+}
+  
+function activity(agent) {
+  const activity = agent.parameters['Activity'];
+  var response = "What does " + activity + " involve?";
+  if(activity === "Dueling") response = "You don't seem like the dueling type, partner.";
+  else if(activity === "Horseback Riding") response = "I use my trusty steed to get around";
+  else if(activity === "Robbing") response = "I could use an extra hand in my crew if you'd like to join.";
+  else if(activity === "Drinking") response = "My favorite drink is a sarsaparilla.";
+  else if(activity === "Eating") response = "My favorite food is steak and potatoes.";
+  else if(activity === "Camping") response = "A city-slicker that likes to camp, that's odd." ;
+  else if(activity === "Hoedown") response = "I'm attending a hoedown tonight, you can tag a long if you like.";
+  else if(activity === "Shooting") response = "What kind of shooter ya got?";
+  agent.add( response );
+}
+
+  // // Uncomment and edit to make your own Google Assistant intent handler
+  // // uncomment `intentMap.set('your intent name here', googleAssistantHandler);`
+  // // below to get this function to be run when a Dialogflow intent is matched
+  // function googleAssistantHandler(agent) {
+  //   let conv = agent.conv(); // Get Actions on Google library conv instance
+  //   conv.ask('Hello from the Actions on Google client library!') // Use Actions on Google library
+  //   agent.add(conv); // Add Actions on Google library responses to your agent's response
+  // }
+  // // See https://github.com/dialogflow/dialogflow-fulfillment-nodejs/tree/master/samples/actions-on-google
+  // // for a complete Dialogflow fulfillment library Actions on Google client library v2 integration sample
+
+  // Run the proper function handler based on the matched Dialogflow intent name
+  let intentMap = new Map();
+  intentMap.set('Default Welcome Intent', welcome);
+  intentMap.set('Default Fallback Intent', fallback);
+  intentMap.set('Addition', addition);
+  intentMap.set('Subtraction', subtraction);
+  intentMap.set('KindsOfAnimals', kindsofanimals);
+  intentMap.set('EarliestMemory', earliestmemory);
+  intentMap.set('FavoriteFood', favoritefood);
+  intentMap.set('FavoriteDrink', favoritedrink);
+  intentMap.set('FavoriteHorse', favoritehorse);
+  intentMap.set('Animals', animals);
+  intentMap.set('BornDate',datecheck);
+  intentMap.set('UserAge',agecheck);
+  intentMap.set('Locations',locationcheck);
+  intentMap.set('LikeActivity', activity);
+  // intentMap.set('your intent name here', googleAssistantHandler);
+  agent.handleRequest(intentMap);
+});
+

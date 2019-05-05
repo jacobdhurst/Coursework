@@ -1,0 +1,13 @@
+BestFS on Black-White Tile Puzzle:
+Solution hfs_path is: 
+[b,b,b,e,w,w,w]
+[b,e,b,b,w,w,w]
+[b,w,b,b,e,w,w]
+[b,w,e,b,b,w,w]
+[b,w,w,b,b,e,w]
+[b,w,w,b,b,w,e]
+[b,w,w,e,b,w,b]
+[e,w,w,b,b,w,b]
+[w,w,e,b,b,w,b]
+[w,w,w,b,b,e,b]
+[w,w,w,b,b,b,e]

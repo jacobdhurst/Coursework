@@ -1,0 +1,41 @@
+Training loaded.
+Would you like to train (T) or play (P)? P
+Input 3 pile dimensions: 15,15,14
+Pile dimensions: 15, 15, 14.
+***************************
+Evaluation: 
+[[0.14196746]
+ [0.13339138]
+ [0.71609746]
+ [0.00455191]
+ [0.15150659]
+ [0.4137397 ]
+ [0.40730321]
+ [0.45356518]
+ [0.4943386 ]]
+Selection: 2
+Remaining: 0
+Strategy: (take, selection) (14, 2)
+***************************
+Computer took 14 from pile 2!
+Pile dimensions: 15, 15, 0.
+Human turn | provide your move 'amount,index': 15,0
+Human took 15 from pile 0!
+Pile dimensions: 0, 15, 0.
+***************************
+Evaluation: 
+[[0.10347911]
+ [0.8555042 ]
+ [0.04695787]
+ [0.01599541]
+ [0.19629058]
+ [0.28857622]
+ [0.45285667]
+ [0.4411775 ]
+ [0.51235731]]
+Selection: 1
+Remaining: 0
+Strategy: (take, selection) (15, 1)
+***************************
+Computer took 15 from pile 1!
+Computer won!

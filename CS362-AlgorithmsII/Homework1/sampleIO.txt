@@ -1,0 +1,169 @@
+Sample Input / Output
+
+Part 1a:
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 1
+Provide a list of moves (comma separated, if single move add comma after): 1,2,3
+Provide a starting pile size: 100
+isWinning(100, [1, 2, 3])=False.
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 1
+Provide a list of moves (comma separated, if single move add comma after): 1,4,5,10
+Provide a starting pile size: 1000
+isWinning(1000, [1, 4, 5, 10])=True.
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 1
+Provide a list of moves (comma separated, if single move add comma after): 1,2,3,4,5,6
+Provide a starting pile size: 14000
+isWinning(14000, [1, 2, 3, 4, 5, 6])=False.
+
+Part 1b:
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 3
+Provide a list of moves (comma separated, if single move add comma after): 1,2,3,4,5,6,7,8,9
+Provide a starting pile size: 45
+45 remaining in pile...
+Computer turn | computer took 5 from pile!
+40 remaining in pile...
+Human turn | provide your move: 4
+Human took 4 from pile!
+36 remaining in pile...
+Computer turn | computer took 6 from pile!
+30 remaining in pile...
+Human turn | provide your move: 7
+Human took 7 from pile!
+23 remaining in pile...
+Computer turn | computer took 3 from pile!
+20 remaining in pile...
+Human turn | provide your move: 7
+Human took 7 from pile!
+13 remaining in pile...
+Computer turn | computer took 3 from pile!
+10 remaining in pile...
+Human turn | provide your move: 2
+Human took 2 from pile!
+8 remaining in pile...
+Computer turn | computer took 8 from pile!
+Computer won!
+
+Part 2a:
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 4
+Provide a list of moves (comma separated, if single move add comma after): 1,2,3
+Provide a starting pile size: 1
+The period is 4. The pattern is FTTT.
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 4
+Provide a list of moves (comma separated, if single move add comma after): 1,4,5,10
+Provide a starting pile size: 1
+The period is 3. The pattern is TFT. 
+***(Wasn't sure why but it was identifying the pattern shifted by 1. This persists in later pattern findings also.)
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 4
+Provide a list of moves (comma separated, if single move add comma after): 1,2,4,5,7,8,9,10
+Provide a starting pile size: 1
+The period is 101. The pattern is TFTTTTTTTTTTFTTFTTFTTTTTTTTTTFTTFTTFTTTTTTTTTTFTTFTTFTTTTTTTTTT
+FTTFTTFTTTTTTTTTTFTTFTTFTTTTTTTTTTFTTF.
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 4
+Provide a list of moves (comma separated, if single move add comma after): 4,5
+Provide a starting pile size: 1
+The period is 44. The pattern is FFFFTTTTTFFFFTTTTTFFFFTTTTTFFFFTTTTTFFFFTTTT.
+
+Part 3 (my own sample inputs):
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 4
+Provide a list of moves (comma separated, if single move add comma after): 1,14,15
+Provide a starting pile size: 1
+The period is 28. The pattern is FTFTFTFTFTFTTTTTTTTTTTTTTTFT.
+
+***This is also my submission for the subset that maximizes period. 
+   I noticed this pattern by a function that tried combinations on a smaller set {1..16}. 
+   It seems to be of the form {1, k, k+1} => period = 2k or 2k+1
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 4
+Provide a list of moves (comma separated, if single move add comma after): 1,63,64
+Provide a starting pile size: 1
+The period is 127. The pattern is FTFTFTFTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+TTTTTTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFTFT.
+
+Welcome to the game of Nim.
+Modes (1-5):                    
+	1. determine if player can win given N and moves.                    
+	2. generate a table of win statuses up to N.                    
+	3. play a game of Nim against the computer.                    
+	4. detect the period of winning statuses for a set of moves.                    
+	5. compute a subset that maximizes period - moves=lower,upper (bounds on values to test).
+Select your mode: 2
+Provide a list of moves (comma separated, if single move add comma after): 1,4,5,10
+Provide a starting pile size: 20
+[False, True, False, True, True, True, True, True, False, True, True, False, True, True, False, True, True, False, True, True, False]  

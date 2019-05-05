@@ -1,0 +1,13 @@
+The following is a breakdown of the work done by Richard and I:
+    Integrated with google assistant                    Both of us
+    Creating general intents:                           Both of us
+    Contributing to SmallTalk:                          Both of us
+    Contributing to entities:                           Both of us
+    Using entities (system and developer) in intents:   Both of us
+    Contributing to knowledge-base:                     Both of us
+    Contributing to experimental knowledge base (site)  Jacob
+    Creating contextual intents:                        Both of us
+    Writing code for the webhook/fulfillment:           Jacob
+    Debugging                                           Both of us
+    Testing                                             Both of us
+    
